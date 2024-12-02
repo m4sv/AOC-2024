@@ -118,8 +118,8 @@ namespace AdventOfCode2024
                 var retryList = safeDict.Where(x=> !x.Value).Select(x=>x.Key).ToList();
                 foreach (var retry in retryList)
                 {
-                    var damepenedList = GetDampenedReports(retry);
-                    if (damepenedList.Any(x => IsSafe(x))) safeCount++;
+                    var dampenedList = GetDampenedReports(retry);
+                    if (dampenedList.Any(x => IsSafe(x))) safeCount++;
                 }
                 Console.Write($"{safeCount} safe");
             }
